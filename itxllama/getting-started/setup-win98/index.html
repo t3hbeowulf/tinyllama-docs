@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://docs.retrodreams.ca/itxllama/itxllama/getting-started/setup-win98/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Setup Windows 98 - TinyLlama - ITX Llama</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">TinyLlama - ITX Llama</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Getting Started</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Unboxing</a>
+</li>
+                                    
+<li>
+    <a href="../jumpers/" class="dropdown-item">Jumpers</a>
+</li>
+                                    
+<li>
+    <a href="../firstboot/" class="dropdown-item">First Boot</a>
+</li>
+                                    
+<li>
+    <a href="../setup/" class="dropdown-item">Setup</a>
+</li>
+                                    
+<li>
+    <a href="../setup-dos/" class="dropdown-item">Setup DOS</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Setup Windows 98</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../faq/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../accessories/" class="nav-link">Accessories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../midi/" class="nav-link">MIDI</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Compatibility</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../compatibility-matrix/" class="dropdown-item">Hardware Matrix</a>
+</li>
+                                    
+<li>
+    <a href="../../games/" class="dropdown-item">Games</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../setup-dos/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../faq/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/t3hbeowulf/tinyllama-docs/blob/main/docs/itxllama/getting-started/setup-win98.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#getting-started-setting-up-windows-98" class="nav-link">Getting Started - Setting up Windows 98</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="getting-started-setting-up-windows-98">Getting Started - Setting up Windows 98<a class="headerlink" href="#getting-started-setting-up-windows-98" title="Permanent link">&para;</a></h1>
+<p>The following guide will help you get started with setting up Windows 98 on your ITX-Llama. </p>
+<hr />
+<h3 id="windows-98-installation">Windows 98 Installation<a class="headerlink" href="#windows-98-installation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Prepare a Windows 98 CD.<ul>
+<li>This can be an OEM CD or a blank CD filled with <strong><em>unzipped</em></strong> versions of these files: 
+<a href="https://archive.org/details/win-98-1">Slip-streamed Install Files</a></li>
+<li>These Windows 98 installation files contain ITX-Llama specific drivers slip-streamed into the installation.</li>
+</ul>
+</li>
+<li>Choose the "Windows 98 (DOS 7.1)" VFD (Virtual Floppy Disc) in BIOS</li>
+<li>Insert a blank SD card (128GB or less is ideal), or SATA SSD</li>
+<li>Ensure you're booting from "Windows 98 (DOS 7.1)" VFD by pressing <code>ESC</code> during start-up and selecting the Virtual Floppy image.</li>
+<li>Format your chosen fixed storage device as normal. See [#MS-DOS Installation].</li>
+<li>Restart your ITX-Llama</li>
+<li>Ensure you're booting from "Windows 98 (DOS 7.1)" VFD by pressing <code>ESC</code> during start-up and selecting the Virtual Floppy image.</li>
+<li>Select the "Setup Windows 98" option.  <em>setup should begin.</em></li>
+</ol>
+<hr />
+<h3 id="windows-98-installation-to-sata-drive">Windows 98 Installation to SATA Drive<a class="headerlink" href="#windows-98-installation-to-sata-drive" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Prep SDCard as installer:
+    a.  Extract ISO of windows 98 SE to root of SDCard
+    b.  Download copy of <a href="https://github.com/eivindbohler/itxllama/archive/refs/heads/main.zip">this repository</a> and extract the ZIP file, place the folder itxllama-main onto the SDCard
+    c.  Place SDCard into ITX Llama</li>
+<li>Boot ITX Llama, change BIOS settings so SATA drive is first priority (F1 to enter BIOS)</li>
+<li>Under Disk Settings, (use the left and right arrow keys to switch between panes) set :
+    a.  Boot Order to anything with SATA first. 
+    b.  Virtual Floppy to Windows 98 (DOS 7.1)
+    c.  USB as Fixed Disks: Disabled</li>
+<li>Save settings with <code>F10</code>, this will save and reboot the BIOS settings</li>
+<li>Press <code>ESC</code> during boot-up and choose the Win98 Boot Disk</li>
+<li>Choose option 3 <code>Start ITX-Llama without CD-ROM Support</code></li>
+<li>Partition the SATA disk using <code>xfdisk</code>:
+    a.  Follow the instructions onscreen in order to partition the hard disk
+    b.  Once complete, reboot the computer and follow steps 5-6 again</li>
+<li>Once rebooted, try to navigate to the C:, it should give an error saying the disk is not formatted. Press <code>A</code> to abort, then go back to the A: and run <code>format C:</code></li>
+<li>After formatting C:, let’s copy the windows 98 files onto the SATA disk. First, we need to extract xcopy  files from the media, go to the WIN98 folder on the D:, then use the following command <code>extract /a win98_47.cab xcopy*.*</code></li>
+<li>Create a win98 folder on the C: (this will hold the installation files), <code>md C:\win98</code></li>
+<li>Copy the files over, <code>xcopy /a /s *.* C:\win98</code></li>
+<li>Create a folder on the C: for the itx-llama patches (we will need to use these soon), <code>md C:\itxdrvs</code></li>
+<li>Copy the files from the itx-llama patches folder to the C:, don’t leave the win98 folder: <code>xcopy /a/s \itxll~94\win98~19\*.* C:\itxdrvs\</code> (remember to use tab completion in order to auto-fill the folder names in correctly)</li>
+<li>Launch <code>setup.exe</code> in C:\win98 and complete the installation...</li>
+<li>The system will reboot from GUI install mode. This is where we need to install the ITX Llama drivers packages. When the system tells you to remove the floppy disks and reboot, during that reboot start pressing F8 to force Windows to bring up the boot menu. </li>
+<li>Select <code>Safe-Mode Command Prompt Only</code> (Shift + F5)</li>
+<li>In the command prompt: <code>cd \itxdrvs</code> then <code>install C:\windows</code></li>
+<li>Eject the SDCard, then reboot the system</li>
+<li>Windows should complete without any issues at this point. </li>
+</ol>
+<p>The author of this section notes there are incompatibilities with the driver <code>esdi_506.pdr</code> when Windows 98 is being loaded. This issue is mitigated when the SDCard is removed.</p>
+<hr />
+<h3 id="windows-98-drivers">Windows 98 Drivers<a class="headerlink" href="#windows-98-drivers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../setup/#windows-98-drivers">Windows 98 Drivers</a></li>
+</ul>
+<hr />
+<p><a href="../setup/">Back to Setup</a> <br>
+<a href="../">Back to Getting Started</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
