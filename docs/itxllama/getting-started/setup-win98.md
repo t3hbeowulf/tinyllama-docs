@@ -53,7 +53,7 @@ The author of this section notes there are incompatibilities with the driver `es
 
 ---
 ### Modem Configuration
-After finalizing configuration of the Windows 98 installation, download the [mdmllama](Modem INF file) then complete the following instructions:
+After finalizing configuration of the Windows 98 installation, download the [Modem INF file][mdmllama] then complete the following instructions:
 1. Navigate to to system -> device manager
 1. Find the modem on com2, go to properties (if none is installed, go ahead and add a new unlisted modem, and point it to the `mdmllama.inf` which was downloaded earlier). Set the baud rate to `300 baud`
 1. Select update driver, browse to `mdmllama.inf` (downloaded above).
