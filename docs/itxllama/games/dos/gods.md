@@ -1,6 +1,6 @@
 # ITX-Llama - Running GODS
 
-[GODS][GODS-wikipedia] is particularly challenging because it requires a slow CPU and MPU-401 Intelligent Mode to run properly. 
+[GODS][wikipedia] is particularly challenging because it requires a slow CPU and MPU-401 Intelligent Mode to run properly. 
 This guide will hopefully help you get this running on your ITX Llama. 
 
 ---
@@ -28,7 +28,8 @@ GODS.EXE
 SLOWDOWN /U
 ```
 
-[Back to Games Index](index.md)
+[Back to MS-DOS Game Compatibility List](game-compatibility.md) <br>
+[Back to Games Index](../index.md)
 
-[GODS-wikipedia]: https://en.wikipedia.org/wiki/Gods_(video_game)
+[wikipedia]: https://en.wikipedia.org/wiki/Gods_(video_game)
 [tool-SLOWDOWN]: https://docs.retrodreams.ca/itxllama/binaries/DOS-utils/SLOWDOWN.ZIP

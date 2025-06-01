@@ -5,13 +5,14 @@ This section will try to collect custom tips and tricks necessary for making you
 ---
 
 ## Games Compatibility - MS-DOS / FreeDOS
-_Coming soon!_
+[MS-DOS 6.22 - Tested Games](dos/game-compatibility.md)
 
 ### Tweaks and Tips for specific DOS games
 
-1. [GODS](gods.md)
-1. [ScummVM Titles](scummvm.md)
+1. [Blood](dos/blood.md)
+1. [GODS](dos/gods.md)
+1. [ScummVM Titles](dos/scummvm.md)
 
 ## Games Compatibility - Windows 98  
 
-[Windows 98 - Tested Games](winGameCompat.md)
+[Windows 98 - Tested Games](win98/game-compatibility.md)

@@ -4,12 +4,11 @@ The following guide will help you get started with setting up Windows 98 on your
 
 ---
 
-### Windows 98 Installation
+### Recommended Windows 98 Installation Procedure
 
 1. Prepare a Windows 98 CD.
-    * This can be an OEM CD or a blank CD filled with **_unzipped_** versions of these files: 
-    [Slip-streamed Install Files][os-win98-archive]
-    * These Windows 98 installation files contain ITX-Llama specific drivers slip-streamed into the installation.
+    * An ISO containing the necessary setup files is here: [Slip-streamed Install Files][os-win98-archive]
+    * These Windows 98 installation files contain ITX-Llama specific drivers and the <8GB corruption fix slip-streamed into the installation.
 1. Choose the "Windows 98 (DOS 7.1)" VFD (Virtual Floppy Disc) in BIOS
 1. Insert a blank SD card (128GB or less is ideal), or SATA SSD
 1. Ensure you're booting from "Windows 98 (DOS 7.1)" VFD by pressing `ESC` during start-up and selecting the Virtual Floppy image.
@@ -20,7 +19,8 @@ The following guide will help you get started with setting up Windows 98 on your
 
 ---
 
-### Windows 98 Installation to SATA Drive
+### Alternative Windows 98 Installation Procedure (SATA SSDs)
+
 1. Prep SDCard as installer:
     a.  Extract ISO of windows 98 SE to root of SDCard
     b.  Download the [Windows 98 ITX-Llama Driver Pack][win98-driverpack] and extract the ZIP file, place the folder WIN98-DRV onto the SDCard
@@ -52,43 +52,80 @@ The following guide will help you get started with setting up Windows 98 on your
 The author of this section notes there are incompatibilities with the driver `esdi_506.pdr` when Windows 98 is being loaded. This issue is caused when booting from an SSD, and an SDCard is inserted. In some configurations this issue can be resolved by creating an extended partition on the SSD. Otherwise, try to boot with the sdcard ejected.
 
 ---
-### Modem Configuration
+### Modem Configuration in Windows 98
+
 After finalizing configuration of the Windows 98 installation, download the [Modem INF file][mdmllama] then complete the following instructions:
+
 1. Navigate to to system -> device manager
 1. Find the modem on com2, go to properties (if none is installed, go ahead and add a new unlisted modem, and point it to the `mdmllama.inf` which was downloaded earlier). Set the baud rate to `300 baud`
 1. Select update driver, browse to `mdmllama.inf` (downloaded above).
 Installing this driver will enable higher speeds baud speeds.
 1. Go into hyperterminal (under accessories)
-- By default the modem will be set to `300 baud`
-- set it to com2
-- turn flow control to xon/off (software)
-- connect 
+    - By default the modem will be set to `300 baud`
+    - set it to com2
+    - turn flow control to xon/off (software)
+    - connect 
 1. Type in the following commands into hyperterminal:
-`AT`
-<should respond with OK> 
-`AT$SSID=wifinetwork`
-`AT$PASS=wifipass `
-`ATC1`
-`AT$SB=115200
+    - `AT` <-- _should respond with 'OK'_ 
+    - `AT$SSID=wifinetwork`
+    - `AT$PASS=wifipass`
+    - `ATC1`
+    - `AT$SB=115200`
 1. disconnect hyperterminal
 1. Go back into device manager change settings to have baud of `115200 `
 1. reconnect in hyperterminal to verify the baud rate is set correctly.
 1. Once settings have been verified, save the settings with the following command
-`AT&W`
-1. Go to start -> accessories -> commmunications -> dialup networking 
+    - `AT&W`
+1. Go to start -> accessories -> communications -> dial-up networking 
 1. Create new connection 
-- number is PPP or 777 
+    - number is `PPP` or `777` 
 1. Save your connection 
-1. Double click to connect 
+1. Double click to connect
 
 ---
 ### Known Issues
+
 #### 256 Color Mode on ATI Cards
-There are known issues with the ATI drivers running on the ITX Llama when the driver is configured for 640x480 or 800x600 at 256 color depth. This issue appears in Windows 95, 98, 2000 and XP. A workaround driver has been included [ati-drivers-modified](here). The ITX Llama team is still analysing the issue and will provide updates here once any further findings are reported. Be aware there have been some reports of users after installing the ATI driver, even after shifting back to a Voodoo 3 card, where they continued to experience the 256 color mode bug.
+
+There are known issues with the ATI drivers running on the ITX Llama when the driver is configured for 640x480 or 800x600 at 256 color depth. This issue appears in Windows 95, 98, 2000 and XP. A workaround driver has been included [ati-drivers-modified](here). The ITX Llama team is still analyzing the issue and will provide updates here once any further findings are reported. Be aware there have been some reports of users after installing the ATI driver, even after shifting back to a Voodoo 3 card, where they continued to experience the 256 color mode bug.
 
 #### Running Sierra games through SCUMMVM
-SCUMMVM provides a mainline Windows 98 version still. That said, if running into audio issues, please add the following line to your autoexec.bat
-`set SDL_AUDIODRIVER=waveout`
+
+SCUMMVM provides a mainline Windows 98 version still. 
+That said, if you're running into audio issues, please add the following line to your `autoexec.bat`: 
+``` batch title="autoexec.bat"
+set SDL_AUDIODRIVER=waveout
+```
+
+#### Mixer / Level issues with MIDI in Windows 98
+
+In case anyone else is having issues with midi audio in Windows. 
+Stage the Crystal driver folder to `C:\Crystal` Add these two lines to your `autoexec.bat`:
+
+``` batch title="autoexec.bat"
+SET BLASTER=A220 I7 D1 T5 P330 J201
+C:\CRYSTAL\CWDMIX /M=13,13 /W=13,13 /L=13,13 /X=1 /F=13,13 /C=13,13 /I=L
+```
+
+#### Disable S/PDIF output in Windows 98
+
+Windows 98 does not pay attention to the BIOS/DOS S/PDIF settings and enables it on driver installation. You can brute-force correct this if you never want to use the S/PDIF output by performing the following actions: 
+
+1. In `C:\SETUP\lamawin98drv\CWD-v286-1998-itx-llama\` edit `cwdaudio.inf`
+1. Find the line that reads `HKR,Config\MIXER,EnableDSPSerialPort,,4`
+1. Edit that to read `HKR,Config\MIXER,EnableDSPSerialPort,,0`
+1. Open device manager and locate Crystal PnP Audio System CODEC
+1. Click Properties -> Driver -> Update Driver
+1. Point the wizard at the driver folder. _You'll need to do this for several files that it requests._
+
+Alternatively, you can disable S/PDIF by setting this registry key or patching the registry with the following file:
+``` ini title="Disable_EnableDSPSerialPort.reg"
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Class\MEDIA\0000\Config\MIXER]
+"EnableDSPSerialPort"="0"
+```
+
 ---
 
 ### Windows 98 Drivers
@@ -99,7 +136,7 @@ SCUMMVM provides a mainline Windows 98 version still. That said, if running into
 [Back to Setup](setup.md) <br>
 [Back to Getting Started](../getting-started.md)
 
-[os-win98-archive]: https://archive.org/details/win-98-1
+[os-win98-archive]: https://archive.org/download/win98se4llama/Win98SE-4-llama-r2.iso
 [win98-driverpack]: https://docs.retrodreams.ca/itxllama/binaries/WIN98-drivers/WIN98-DRV.ZIP
 [itxllama-repo]: https://github.com/eivindbohler/itxllama/archive/refs/heads/main.zip
 [Retrodreams]: https://retrodreams.ca/collections/all

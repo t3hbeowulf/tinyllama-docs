@@ -2,9 +2,13 @@
 
 Congratulations on purchasing an ITX Llama and the official ITX case! This guide page and video are here to help you construct your new case. Enjoy!
 
+---
+
 ## Assembly Instructions
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PY_88_Z4S98?si=26q5dDUQcKfhq5Rr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
 
 ## Bill of Materials
 

@@ -41,6 +41,16 @@ Below is a collection of hardware accessories that should work with the ITX Llam
     * Add-ons:
         * With a Pi Pico/DAC board populated with a Pi Pico W, you can add remote image management to the ZuluIDE
         * The DAC board also enables passing CD Audio to the onboard Crystal sound chip
+    * Link(s):
+        * Adapter: [IDE to Sata][IDEtoSata]
+    * Additional Configuration Information for the `zuluide.ini` file:
+``` ini title="zuluide.ini"
+[ide]
+max_udma = -1
+max_pio = 3
+max_blocksize = 4096
+device = CDROM
+```
 
 1. **USBODE** 
     * **Status:** Verified to work on ITX Llama

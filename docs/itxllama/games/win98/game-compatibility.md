@@ -1,12 +1,13 @@
 # Games Compatibility - Windows 98
 
-### Legend: 
+### Legend
 
 * 🟩 - Runs at stock 300MHz clocks
 * 🟨 - Runs with tweaks and/or an overclock
 * 🟧 - Runs slow even with overclock or has minor issues
-* 🟥 - Does not run / major issues 
- 
+* 🟥 - Does not run / major issues
+
+### Compatibility Matrix - Windows 98 Games 
 
 | **Game**                           | **Compatibility**   | **Notes**         |
 | :--------------------------------- | :------------------ | :---------------- |  
@@ -25,7 +26,7 @@
 | Emperor:  Battle for Dune          | 🟥 Bad              | Requires beta drivers for directx8 support.  Too slow to be playable.   |
 | Fallout 2                          | 🟩 Good             | Zuluide install Crashes.  Install through daemon tools.   |
 | Forsaken                           | 🟩 Good             | |
-| Grim Fandango                      | 🟧 Good             | Playable, but audio is disorted.   |
+| Grim Fandango                      | 🟧 Good             | Playable, but audio is distorted.   |
 | Half Life                          | 🟩 Good             |  |
 | Icewind Dale                       | 🟩 Good             |  |
 | Jedi Knight: Dark Forces 2         | 🟩 Good             |  |
@@ -48,5 +49,6 @@
 | Warcraft 3                         | 🟥 Bad              | RAM requirements are too high for the Llama. |
 | Xcom                               | 🟩 Good             | GoG version works with OPL3, but does not appear to work with midi.   |
 
+### System Configuration
 
-*All games were tested with a Voodoo 3 3000, and the SOM set to 500mhz, with a processor and case fan in place. It uses a bare bones windows 98 installation with [drivers from the ITX Llama github](https://github.com/eivindbohler/itxllama?tab=readme-ov-file#windows-98-drivers), then fully patched using http://v4.windowsupdaterestored.com, and the [voodoo 1.07 drivers](https://www.dosdays.co.uk/topics/Manufacturers/3dfx/3dfx_voodoo3_3000.php) installed (not affiliated, use at your own risk). Games were tested with any available introductory mission, using default detail settings and resolution. "Bad" indicates that the game will not load or is otherwise unplayable due to performace constraints. "Poor" indicates that the game is playable, but with poor framerate and likely requires low detail settings. "Good" means the game is playable without special considerations. Playable games may still benefit from adjustment of detail settings.*
+*All games were tested with a Voodoo 3 3000, and the SOM set to 500mhz, with a processor and case fan in place. It uses a bare bones windows 98 installation with [drivers from the ITX Llama github](https://github.com/eivindbohler/itxllama?tab=readme-ov-file#windows-98-drivers), then fully patched using http://v4.windowsupdaterestored.com, and the [voodoo 1.07 drivers](https://www.dosdays.co.uk/topics/Manufacturers/3dfx/3dfx_voodoo3_3000.php) installed (not affiliated, use at your own risk). Games were tested with any available introductory mission, using default detail settings and resolution. "Bad" indicates that the game will not load or is otherwise unplayable due to performance constraints. "Poor" indicates that the game is playable, but with poor framerate and likely requires low detail settings. "Good" means the game is playable without special considerations. Playable games may still benefit from adjustment of detail settings.*
