@@ -20,26 +20,50 @@ nav:
   - Compatibility:
     - Hardware Matrix: itxllama/compatibility-matrix.md
     - Games: itxllama/games/index.md
+    - MS-DOS Game Compatibility: itxllama/games/dos/game-compatibility.md
+    - Windows Game Compatibility: itxllama/games/win98/game-compatibility.md
   # - TinyLlama: tinyllama/index.md
   # - TinyLlama2: tinyllama2/index.md
   # - ITX Llama: itxllama/index.md
   # - TinyLlama3: tinyllama3/index.md
 
 theme: 
-  name: mkdocs
-  shortcuts:
-    help: 191    # ?
-    next: 78     # n
-    previous: 80 # p
-    search: 83   # s
-  user_color_mode_toggle: true
-  color_mode: auto
+  name: material
+  favicon: ../images/favicon.png
+  palette: 
+  # Palette toggle for automatic mode
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/brightness-auto
+      name: Switch to light mode
+  # Palette toggle for light mode
+  - scheme: default
+    media: "(prefers-color-scheme: light)"
+    toggle:
+      icon: material/eye 
+      name: Switch to dark mode
+
+  # Palette toggle for dark mode
+  - scheme: slate
+    media: "(prefers-color-scheme: dark)"
+    toggle:
+      icon: material/eye-outline
+      name: Switch to light mode
+  # shortcuts:
+  #   help: 191    # ?
+  #   next: 78     # n
+  #   previous: 80 # p
+  #   search: 83   # s
+  # user_color_mode_toggle: true
+  # color_mode: auto
   features:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.expand
     - navigation.path
     - toc.integrate
+    - content.code.copy
+    - content.code.select
 
 markdown_extensions:
   - toc:
@@ -48,3 +72,10 @@ markdown_extensions:
   - attr_list
   - def_list
   - tables
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

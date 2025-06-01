@@ -1,17 +1,19 @@
 # ITX-Llama - Hardware Compatibility Matrix
 
 ## Graphics
-| Family | Model         | Tested (y/n) | Notes                         |
-| :----: | :-----------: | :----------: | :---------------------------- |
-| ATI    | Radeon 7500   | y            | Works natively in DOS / Win98 |
-| ATI    | Radeon 9250   | y            | Works natively in DOS / Win98 |
-| 3DFx   | Voodoo 3      | y            | Works natively in DOS / Win98 |
-| 3DFx   | Voodoo 5 5500 | y            | Works natively in DOS / Win98 |
-| nVidia | Riva 128      | y            | Works natively in DOS only    |
-| nVidia | TNT           | y            | Works natively in DOS only    |
-| nVidia | TNT2          | y            | Works natively in DOS only    |
-| S3     | Savage4       | y            | Works natively in DOS only    |
-| Matrox | G100          | y            | Works natively in DOS only    |
+| Family | Model         | Tested DOS (y/n) | Tested Win98 (y/n) | Notes                                    |
+| :----: | :-----------: | :--------------: | :----------------: | :--------------------------------------- |
+| ATI    | Radeon 7500   | 🟩 - y           | 🟨 - y             | Win98: (256 color mode issues observed)  |
+| ATI    | Radeon 9250   | 🟩 - y           | 🟨 - y             | Win98: (256 color mode issues observed)  |
+| 3DFx   | Velocity 100  | 🟩 - y           | 🟩 - y             |                                          |
+| 3DFx   | Voodoo 3 1000 | 🟩 - y           | 🟩 - y             |                                          |
+| 3DFx   | Voodoo 3 2000 | 🟩 - y           | 🟩 - y             |                                          |
+| 3DFx   | Voodoo 5 5500 | 🟩 - y           | 🟩 - y             |                                          |
+| nVidia | Riva 128      | 🟩 - y           | 🟥 - n             | Win98: Driver won't initialize           |
+| nVidia | TNT           | 🟩 - y           | 🟥 - n             | Win98: Driver won't initialize           |
+| nVidia | TNT2          | 🟩 - y           | 🟥 - n             | Win98: Driver won't initialize           |
+| S3     | Savage4       | 🟩 - y           | 🟥 - n             | Win98: Black screen after driver install |
+| Matrox | G100          | 🟩 - y           | 🟥 - n             | Win98: Black screen after driver install |
 
 ## Wavetable Options
 | Module    | MIDI Type                        | Connector   | Notes                                       |

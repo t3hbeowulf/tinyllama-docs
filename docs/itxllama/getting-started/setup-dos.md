@@ -26,6 +26,38 @@ The following guide will help you get started with setting up DOS on your ITX-Ll
 2. Check out this [README](freedos-sdcard.md)
 3. Insert the SD Card into your ITX-Llama and enjoy!
 
+
+### MS-DOS 6.22 Example Configs
+
+``` batch title="config.sys"
+DOS=HIGH,UMB
+FILES=40
+LASTDRIVE=Z
+STACKS=9,256
+
+DEVICE=C:\DOS\SETVER.EXE
+DEVICE=C:\DOS\HIMEM.SYS /TESTMEM:OFF /VERBOSE
+DEVICE=C:\DOS\SMARTDRV.EXE /DOUBLE_BUFFER
+DEVICE=C:\DOS\EMM386.EXE RAM VERBOSE
+```
+
+``` batch title="autoexec.bat"
+C:\WINDOWS\net start
+C:\DOS\SMARTDRV.EXE /X
+@ECHO OFF
+PROMPT $p$g
+PATH C:\WINDOWS;C:\DOS;C:\DRIVERS;C:\DRIVERS\MT32PI
+SET TEMP=C:\DOS
+
+LH C:\DRIVERS\CTMOUSE.EXE /r2
+
+REM SoundCard Settings
+set BLASTER=A220 I7 D1 H5 P330 J200
+CWDMIX /M=15,15 /W=7,7 /L=15,15 /X=1 /F=15,15 /C=15,15 /I=C
+```
+
+Inspiration: [Fixing EMM386.exe with SMARTDRV and Double Buffering][msdos-doublebuffer]
+
 ---
 
 ### DOS Drivers
@@ -34,6 +66,7 @@ The following guide will help you get started with setting up DOS on your ITX-Ll
 ---
 
 ### Windows 3.1 Tips
+
 #### Video
 For users with ATI Raedon 9XXX cards, be aware that no drivers were produced that are compatible with these cards natively from ATI. The Microsoft provided SVGA are also incompatible with this Raedon cards. In order to achieve 256 colors or higher, please consider the project utilizing the [vbesvga](vbesvga.drv) project.
 
@@ -55,3 +88,4 @@ After installing the Windows 3.1 drivers for the Crystal Audio, be sure to set t
 [mt32-pi]: https://github.com/dwhinham/mt32-pi
 [mt32-pi-control]: https://github.com/gmcn42/mt32-pi-control/tree/main/dos_bin
 [vbesvga]: https://github.com/PluMGMK/vbesvga.drv
+[msdos-doublebuffer]: https://info.wsisiz.edu.pl/~bse26236/batutil/help/SMARTD_S.HTM

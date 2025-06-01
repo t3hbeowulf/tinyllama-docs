@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Known Issue - Analog Audio down-mixed to mono
 
 Batch #1 and #2 (thru Rev F) are down-mixing External Line-In and External Line-Out analog connections to mono. Below details the remediation steps to restore stereo In/Out on the Blue and Green 3.5mm jacks.

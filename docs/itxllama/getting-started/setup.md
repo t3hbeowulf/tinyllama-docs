@@ -35,16 +35,20 @@ See [Windows 98 Setup Guide](setup-win98.md)
 * [Realtek R6040 10/100 NIC][driver-win98-R6040] - Windows 98 drivers for the integrated Vortex86EX network interface.
 * [Large Drive Support (tbplus) Patch][driver-win98-TBPLUS] - Windows 98 Patch for Large HDD support. (subset of TBPlus Pack)
 * [USB Removable Storage Driver][driver-win98-USB] - Windows 98 USB removable storage driver (nusb36e)
+* [Alternative Crystal Drivers][driver-crystal-archive] - Archive of alternative Crystal Sound Drivers 
 
 ---
 
-### Audio Setup
-For Windows 98/3.1/DOS, in order to get the proper sound setup (including mt32-pi/dreamblaster/OPL) be sure to install the crystal drivers onto your system, then add the following to the autoexec.bat (even on Windows 98):
+### Crystal Audio Setup
+
+For DOS / Windows 3.1 / Windows 98, in order to properly configure sound (including mt32-pi/dreamblaster/OPL-3), ensure the following lines are in your `autoexec.bat`: _(This applies to Windows 98 as well)_
 
 ```
-SET BLASTER=A220 I7 D1 T5 P330
+SET BLASTER=A220 I7 D1 T5 P330 J201
 C:\CRYSTAL\CWDMIX /M=13,13 /W=13,13 /L=13,13 /X=1 /F=13,13 /C=13,13 /I=L
 ```
+
+On Windows 98, install the [Crystal 4237b v2.86][driver-win98-CWD] audio drivers onto your system. 
 
 This should resolve any audio issues, including optical out problems. Be aware the dreamblaster and mt32-pi are configured to come in as "line-in", so use that slider to adjust their volumes.
 
@@ -75,6 +79,7 @@ While there are many boot managers that are available to use, in some configurat
 [driver-win98-CWD]: https://docs.retrodreams.ca/itxllama/binaries/WIN98-drivers/CWD-v286-1998-itx-llama/CWD_DRVS.zip
 [driver-win98-R6040]: https://docs.retrodreams.ca/itxllama/binaries/WIN98-drivers/r6040_win98/r6040_win98.zip
 [driver-win98-USB]: https://docs.retrodreams.ca/itxllama/binaries/WIN98-drivers/USB/nusb36e.exe
+[driver-crystal-archive]: https://web.archive.org/web/19970607041537/http://www.crystal.com/drivers/audio-d.htm
 [os-win98-part1]: https://docs.retrodreams.ca/itxllama/binaries/WIN98/WIN98_1.zip
 [os-win98-part2]: https://docs.retrodreams.ca/itxllama/binaries/WIN98/WIN98_2.zip
 [os-win98-archive]: https://archive.org/details/win-98-1

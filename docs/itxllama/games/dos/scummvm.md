@@ -21,4 +21,5 @@ SOFTMPU.EXE /SB:220 /IRQ:7 /MPU:330
 set SDL_AUDIODRIVER=waveout
 ```
 
-[Back to Games Index](index.md)
+[Back to MS-DOS Game Compatibility List](game-compatibility.md) <br>
+[Back to Games Index](../index.md)
