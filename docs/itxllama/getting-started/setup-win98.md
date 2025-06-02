@@ -83,11 +83,21 @@ Installing this driver will enable higher speeds baud speeds.
 1. Double click to connect
 
 ---
+### Windows 98 Performance Tuning
+
+For using Windows 98 on any medium especially SSDs and SD card:
+
+* Install T1 patch in safe mode _(not necessary if you're using the default instal media above, it's already integrated)_
+* Enable DMA for your disks
+* Disable virtual memory _(saves write-cycle/wear on your SD Card/SSD)_
+* Disable scheduled tasks _(esp. anti virus check and defrag jobs)_
+
+---
 ### Known Issues
 
 #### 256 Color Mode on ATI Cards
 
-There are known issues with the ATI drivers running on the ITX Llama when the driver is configured for 640x480 or 800x600 at 256 color depth. This issue appears in Windows 95, 98, 2000 and XP. A workaround driver has been included [ati-drivers-modified](here). The ITX Llama team is still analyzing the issue and will provide updates here once any further findings are reported. Be aware there have been some reports of users after installing the ATI driver, even after shifting back to a Voodoo 3 card, where they continued to experience the 256 color mode bug.
+There are known issues with the ATI drivers running on the ITX Llama when the driver is configured for 640x480 or 800x600 at 256 color depth. This issue appears in Windows 95, 98, 2000 and XP. A workaround driver has been included [here][ati-drivers-modified]. The ITX Llama team is still analyzing the issue and will provide updates here once any further findings are reported. Be aware there have been some reports of users after installing the ATI driver, even after shifting back to a Voodoo 3 card, where they continued to experience the 256 color mode bug.
 
 #### Running Sierra games through SCUMMVM
 

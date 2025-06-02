@@ -67,6 +67,8 @@ Optionally, you may have elected to include the following accessories:
 
 See [Configuring Jumpers](getting-started/jumpers.md) for detailed information on hardware configuration.
 
+---
+
 ## Case Assembly
 
 See [Assembling Your Official Case](getting-started/case-assembly.md) for detailed information on assembling your Official ITX Llama Case.

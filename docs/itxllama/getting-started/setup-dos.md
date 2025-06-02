@@ -68,7 +68,7 @@ Inspiration: [Fixing EMM386.exe with SMARTDRV and Double Buffering][msdos-double
 ### Windows 3.1 Tips
 
 #### Video
-For users with ATI Raedon 9XXX cards, be aware that no drivers were produced that are compatible with these cards natively from ATI. The Microsoft provided SVGA are also incompatible with this Raedon cards. In order to achieve 256 colors or higher, please consider the project utilizing the [vbesvga](vbesvga.drv) project.
+For users with ATI Radeon 9XXX cards, be aware that no drivers were produced that are compatible with these cards natively from ATI. The Microsoft provided SVGA are also incompatible with this Radeon cards. In order to achieve 256 colors or higher, please consider the project utilizing the [vbesvga.drv][vbesvga] project.
 
 #### Sound
 After installing the Windows 3.1 drivers for the Crystal Audio, be sure to set the IRQ to 7 (the drivers default it to 5). Do this in the autoexec.bat, as well as the system.ini file.
