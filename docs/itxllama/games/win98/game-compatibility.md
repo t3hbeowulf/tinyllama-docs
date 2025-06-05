@@ -44,6 +44,7 @@
 | Star Trek: Armada                  | 🟩 Good             |  |
 | Starcraft                          | 🟩 Good             | only patch up to 1.161   |
 | System Shock 2                     | 🟩 Good             |  |
+| Theme Hospital                     | 🟩 Good             |  |
 | Thief                              | 🟩 Good             |  |
 | Warcraft 2                         | 🟩 Good             |  |
 | Warcraft 3                         | 🟥 Bad              | RAM requirements are too high for the Llama. |
