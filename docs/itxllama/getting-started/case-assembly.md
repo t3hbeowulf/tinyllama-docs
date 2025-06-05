@@ -72,7 +72,7 @@ If you selected "Only 3D printed parts" when ordering your case, the following p
 
 The official case has provisions for two power supply options. 
 
-* The default is using an external power brick through a panel-mounted jack provided by a PicoPSU of 80W or hight. 
+* The default is using an external power brick through a panel-mounted jack provided by a PicoPSU of 80W or higher. 
 * As an advanced option, users may opt to install an internal Mean Well power supply for the PicoPSU and utilize the C8 panel mount cutouts to plug an ungrounded power cable into their Llama's case. 
     * **WARNING!** The Mean Well PSU setup is considered an unsupported, advanced option—recommended only for users who are experienced and understand the associated requirements. The official case design continues to support and recommend the use of a PicoPSU, which avoids these issues entirely. <br>
     That said, it’s certainly helpful to note the grounding considerations with the Mean Well unit. While grounding can add a layer of safety, it's worth mentioning that many modern consumer electronics—including the latest consoles from Microsoft and Sony—use ungrounded C8 connectors without issue. These designs pass stringent safety certifications, so a C8 connector isn’t inherently unsafe when used appropriately within a well-designed system.

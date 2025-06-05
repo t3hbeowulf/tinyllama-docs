@@ -87,7 +87,7 @@ Installing this driver will enable higher speeds baud speeds.
 
 For using Windows 98 on any medium especially SSDs and SD card:
 
-* Install T1 patch in safe mode _(not necessary if you're using the default instal media above, it's already integrated)_
+* Install T1 patch in safe mode _(not necessary if you're using the default install media above, it's already integrated)_
 * Enable DMA for your disks
 * Disable virtual memory _(saves write-cycle/wear on your SD Card/SSD)_
 * Disable scheduled tasks _(esp. anti virus check and defrag jobs)_
