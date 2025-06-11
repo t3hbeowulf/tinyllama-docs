@@ -17,6 +17,6 @@ The GamePort on the ITX-Llama interfaces with the Crystal CS4372B sound chip. Du
 Disable the GamePort by forcing a mismatch in the port assignment. 
 
 * In BIOS: Select Port 208h for the GamePort
-* In Autoexec.bat: Ensure SET BLASTER has `J200` at the end. 
+* In Autoexec.bat: Ensure SET BLASTER has `J200` or `J0` (if using the [UNISOUND](https://www.vogons.org/viewtopic.php?t=72553) driver) at the end.
 
 This mismatch will effectively disable the GamePort in DOS and prevent erratic button presses from causing games to misbehave. 
