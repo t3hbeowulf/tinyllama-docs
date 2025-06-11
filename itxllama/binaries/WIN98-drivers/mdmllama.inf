@@ -1,0 +1,77 @@
+[Version]
+Signature="$CHICAGO$"
+Class=Modem
+ClassGUID={4D36E96D-E325-11CE-BFC1-08002BE10318}
+Provider=%ITL%
+LayoutFile=LAYOUT.INF
+
+[Manufacturer]
+%Man% = Espressif
+
+[Espressif]
+%ITL0% = ITL0, RAS-GENERIC
+
+[ITL0]
+AddReg=All, Common, ITL0Reg, 115200, EXTERNAL
+
+[All]
+HKR,,FriendlyDriver,,Unimodem.vxd
+HKR,,DevLoader,,*VCOMM
+HKR,,PortSubClass,1,02
+HKR,,ConfigDialog,,modemui.dll
+HKR,,EnumPropPages,,"modemui.dll,EnumPropPages"
+
+[EXTERNAL]
+HKR,, DeviceType, 1, 01
+
+[Common]
+HKR, Answer, 1,,""
+HKR, Hangup, 1,, "Bye"
+HKR, Hangup, 2,, "NoResponse"
+HKR, Settings, DialSuffix,, ""
+; DCB's - dwords and words are byte reversed
+
+;                                                                         ByteSize (Number of bits/byte, 4-8)
+
+;                                                                             Parity (0-4=None,Odd,Even,Mark,Space)
+
+;                                                                                 StopBits (0,1,2 = 1, 1.5, 2)
+
+;            |DCBLength   |BaudRate    |Bit Mask    |Rsvd  |XonLim|XofLim|   |   |   |Xon|Xof|Err|Eof|Evt
+
+[921600]
+HKR,, DCB, 1, 1C,00,00,00, 00,10,0e,00, 15,20,00,00, 00,00, 0a,00, 0a,00, 08, 00, 00, 11, 13, 00, 00, 00
+
+[ITL0Reg] ; Null-Modem
+HKR, Init, 1,, "AT<cr>"
+HKR, Init, 2,, "NoResponse"
+HKR, Settings, Prefix,,"AT"
+HKR, Settings, DialPrefix,, "DT"
+HKR, Settings, Terminator,, "<cr>"
+HKR, Monitor, 1,, "None"
+HKR, Answer, 1,, "ATA<cr>"
+HKR, Answer, 2,, "NoResponse"
+; Properties - dwords and words are byte reversed
+
+;                   |Dial Options             |InactivityTimeout        |Speaker Mode             |Max DTE Rate
+
+;                                |CallSetupFailTimeout     |Speaker Volume           |Modem Options            |Max DCE Rate
+
+HKR,, Properties, 1, 00,00,00,00, 00,00,00,00, 00,00,00,00, 00,00,00,00, 00,00,00,00, 30,00,00,00, 00,10,0e,00, 00,10,0e,00
+HKR,Responses,"<lf><cr><lf>CONNECT 300<cr><lf>",1,02,00,2C,01,00,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 1200<cr><lf>",1,02,00,B0,04,00,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 2400<cr><lf>",1,02,00,60,09,00,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 4800<cr><lf>",1,02,00,C0,12,00,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 9600<cr><lf>",1,02,00,80,25,00,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 19200<cr><lf>",1,02,00,00,4B,00,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 38400<cr><lf>",1,02,00,00,96,00,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 57600<cr><lf>",1,02,00,00,E1,00,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 115200<cr><lf>",1,02,00,00,C2,01,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 230400<cr><lf>",1,02,00,00,84,03,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 460800<cr><lf>",1,02,00,00,08,07,00,00,00,00,00
+HKR,Responses,"<lf><cr><lf>CONNECT 921600<cr><lf>",1,02,00,00,10,0E,00,00,00,00,00
+
+[Strings]
+ITL = "ITX Llama"
+Man = "Espressif"
+ITL0 = "ESP32 Null Modem (The Old Net)"
