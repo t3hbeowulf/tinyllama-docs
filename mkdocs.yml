@@ -14,6 +14,7 @@ nav:
     - Setup: itxllama/getting-started/setup.md
     - Setup DOS: itxllama/getting-started/setup-dos.md
     - Setup Windows 98: itxllama/getting-started/setup-win98.md
+  - BIOS: itxllama/bios.md
   - FAQ: itxllama/faq.md
   - Accessories: itxllama/accessories.md
   - MIDI: itxllama/midi.md
@@ -29,7 +30,7 @@ nav:
 
 theme: 
   name: material
-  favicon: ../images/favicon.png
+  favicon: itxllama/images/favicon.png
   palette: 
   # Palette toggle for automatic mode
   - media: "(prefers-color-scheme)"
@@ -78,4 +79,7 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
   - pymdownx.superfences
